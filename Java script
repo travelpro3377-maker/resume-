@@ -1,0 +1,67 @@
+javascript
+async function improveResume() {
+
+    let resume = document.getElementById('resume').value;
+
+    let res = await fetch('/improve-resume', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ resume })
+    });
+
+    let data = await res.json();
+
+    document.getElementById('output').innerText = data.result;
+}
+
+async function scoreResume() {
+
+    let resume = document.getElementById('resume').value;
+
+    let res = await fetch('/resume-score', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ resume })
+    });
+
+    let data = await res.json();
+
+    document.getElementById('output').innerText = data.result;
+}
+
+async function coverLetter() {
+
+    let resume = document.getElementById('resume').value;
+    let job = document.getElementById('job').value;
+
+    let res = await fetch('/generate-cover-letter', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ resume, job })
+    });
+
+    let data = await res.json();
+
+    document.getElementById('output').innerText = data.result;
+}
+
+async function saveEmail() {
+
+    let email = document.getElementById('email').value;
+
+    await fetch('/save-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+    });
+
+    alert('Email saved!');
+}
