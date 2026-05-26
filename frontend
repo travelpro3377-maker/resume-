@@ -1,0 +1,41 @@
+temptplates.index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Booster</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="hero">
+    <h1>🚀 AI Resume Booster</h1>
+    <p>Fix your resume instantly with AI</p>
+</div>
+
+<div class="container">
+
+<textarea id="resume" placeholder="Paste your resume here..."></textarea>
+
+<div class="buttons">
+    <button onclick="improveResume()">Improve Resume</button>
+    <button onclick="scoreResume()">Resume Score</button>
+</div>
+
+<h2>Paste Job Description</h2>
+<textarea id="job"></textarea>
+
+<button onclick="coverLetter()">Generate Cover Letter</button>
+
+<div id="output"></div>
+
+<div class="email-box">
+    <h3>Get AI Job Tips</h3>
+    <input id="email" placeholder="Email address">
+    <button onclick="saveEmail()">Join Free</button>
+</div>
+
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
