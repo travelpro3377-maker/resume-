@@ -1,0 +1,10 @@
+6OPENAI_API_KEY=YOUR_KEY
+STRIPE_SECRET_KEY=YOUR_STRIPE_KEYflask
+openai
+python-dotenv
+stripe
+sqlite-utils
+gunicornpip install -r requirements.txt
+pip install flask openai python-dotenv stripe sqlite-utils
+OPENAI_API_KEY=YOUR_KEY
+STRIPE_SECRET_KEY=YOUR_STRIPE_KEY
